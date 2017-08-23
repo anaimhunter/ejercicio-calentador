@@ -45,5 +45,17 @@ public class Calentador
    {
        return temperatura;
    }
+   
+   public void modificarIncremento(int nuevoIncremento)
+   {
+       if(nuevoIncremento<0)
+       {
+           incremento=Math.abs(nuevoIncremento);
+       }
+       else
+       {
+           incremento=nuevoIncremento;
+       }
+   }
   
 }
