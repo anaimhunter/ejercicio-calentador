@@ -10,20 +10,24 @@ public class Calentador
     // instance variables 
     private int temperatura;
     private int incremento;
+    private int min;
+    private int max;
 
     /**
      * Constructor for objects of class Calentador
      */
-    public Calentador()
+    public Calentador(int maxI, int minI)
     {
         // initialise instance variables
         temperatura=15;
         incremento=3;
+        max=maxI;
+        min=minI;
     }
     
    public void calienta()
    {
-       if(temperatura<=27)
+       if((temperatura+incremento)<max)
        {
            temperatura= temperatura + incremento;
        }
@@ -31,7 +35,7 @@ public class Calentador
    
    public void enfria()
    {
-       if(temperatura>=-9)
+       if((temperatura-incremento)>min)
        {
            temperatura= temperatura - incremento;
        }
