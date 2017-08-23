@@ -23,12 +23,18 @@ public class Calentador
     
    public void calienta()
    {
-       temperatura= temperatura + 5;
+       if(temperatura<=27)
+       {
+           temperatura= temperatura + incremento;
+       }
    }
    
    public void enfria()
    {
-       temperatura= temperatura - 5;
+       if(temperatura>=-9)
+       {
+           temperatura= temperatura - incremento;
+       }
    }
    
    public int temperatura()
