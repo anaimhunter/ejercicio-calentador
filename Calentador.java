@@ -1,9 +1,6 @@
 
 /**
- * Write a description of class Calentador here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * La clase calentador representa un objeto que tiene temperatura
  */
 public class Calentador
 {
@@ -14,7 +11,9 @@ public class Calentador
     private int max;
 
     /**
-     * Constructor for objects of class Calentador
+     * Constructor de clase calentador
+     * @param maxI Parametro que representa la temperatura maxima 
+     * @param minI Parametro que representa la tempratura minima
      */
     public Calentador(int maxI, int minI)
     {
@@ -25,6 +24,9 @@ public class Calentador
         min=minI;
     }
     
+    /**
+     * Eleva la temperatura del calentador 
+     */
    public void calienta()
    {
        if((temperatura+incremento)<max)
@@ -33,6 +35,9 @@ public class Calentador
        }
    }
    
+   /**
+    * Disminuye la temperatura
+    */
    public void enfria()
    {
        if((temperatura-incremento)>min)
@@ -41,11 +46,19 @@ public class Calentador
        }
    }
    
+   /**
+    * Da la temperatura
+    * @return Regresa la temperatura del calentador
+    */
    public int temperatura()
    {
        return temperatura;
    }
    
+   /**
+    * Modifica el incremento
+    * @param nuevoIncremento Parametro que representa el nuevo incremento
+    */
    public void modificarIncremento(int nuevoIncremento)
    {
        if(nuevoIncremento<0)
